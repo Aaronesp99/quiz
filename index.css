@@ -1,7 +1,28 @@
 body{
    background-color: #400c60;
    background-image: url('image/body_background.gif');
-   font-family: "Roboto", serif;;
+   font-family: "Silkscreen", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.silkscreen-regular {
+   font-family: "Silkscreen", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.silkscreen-bold {
+   font-family: "Silkscreen", serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+.vt323-regular {
+   font-family: "VT323", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 50px;
 }
 
 
@@ -14,14 +35,16 @@ body{
    background: #ddfec0;
    border-top: 8px solid #9744f2;
    border-bottom: 8px solid #9744f2;
-   color: #e1c0fe;
-   font-size: 22px;
-   -webkit-text-stroke: 1.5px #b980f3;
+   color: #b96ffa;   /* font-size: px; */
+   /* -webkit-text-stroke: 1.5px #b980f3; */
+   /* font-family: "VT323", serif; */
+   /* font-weight: 400; */
+   /* font-style: normal; */
 }
 
 .title{
    color: #7818e2;
-   font-weight: 700;
+   font-weight: 500;
    padding: 1rem 0 !important;
 
 }
@@ -41,10 +64,10 @@ body{
 }
 
 #contenedor-inicio, #contenedor-resultado{
-   height: 60vh;
+   min-height: 60vh;
    background: linear-gradient(1deg, #d4fcb2, #ffffff);
    border: solid 6px #7de211;
-   width: 70%;
+   /* width: 70%; */
    margin: auto;
    color: #9744f2;
    font-size: 24px;
@@ -52,13 +75,13 @@ body{
 
 #contenedor-inicio{
    font-size: 30px;
-
 }
 
 #contenedor-resultado{
    font-weight: 500;
    display: none;
-   font-size: 32px;
+   font-size: 24px;
+   font-family: sans-serif;
 }
 
 .carousel{
@@ -70,7 +93,7 @@ body{
 .contenedor-alternativas{
    font-size: 18px;
    color: #9744f2;
-   font-weight: 600;
+   /* font-weight: 600; */
    padding: 1rem 3rem;
 }
 
@@ -93,15 +116,18 @@ body{
    padding: 1rem 3rem !important;
 }
 
-.contenedor-diagnostico, .contenedor-boton-inicio{
+.contenedor-diagnostico, .contenedor-boton-inicio, .cuadro{
    background: #7818e2;
    border: 7px solid #cba2f3;
 }
 
-@font-face {
-   font-family: 'gameplay';
-   src: url('font/Gameplay.ttf') format('woff2'),
-        url('font/Gameplay.ttf') format('woff');
-   font-weight: normal;
-   font-style: normal;
+.cuadro{
+   font-size: 18px;
 }
+
+.carousel-control-prev, .carousel-control-next{
+   font-family: sans-serif!important;
+
+}
+
+

@@ -8,8 +8,8 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="index.css?0.2">
+   <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="index.css?0.3">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
@@ -25,23 +25,23 @@
          <img src="image/diagnosticate.png" alt="" class="image-diagnosticate me-4">
       </div>
    </div>
-   <div class="row header mb-5">
-      <div class="col-md-12 py-3 text-center">
-         PERFIL PSICOLÓGICO GAMEPLAY
-      </div>
+   <div class="row header  mb-5">
+      <h5 class="col-md-12 py-1 text-center vt323-regular">
+         DESCUBRE TU ENFERMEDAD MENTAL
+      </h5>
    </div>
 
-   <div class="text-center" id="contenedor-inicio">
-      <p class="text-center px-4 py-5 my-5">
-         Las preguntas serán evaluadas por un puntaje de 0 - 3 para finalmente<br>revelar tu verdadera personalidad y diagnóstico.
+   <div class="col-12 col-md-8" id="contenedor-inicio">
+      <p class="text-center p-1 p-md-5 my-5 text-center">
+         Las preguntas serán evaluadas por un puntaje de 0 - 3 para saber qué personaje eres y tu diagnóstico.
       </p>
-      <div class="contenedor-boton-inicio w-50 m-auto p-3">
+      <div class="contenedor-boton-inicio w-50 m-auto p-3 text-center">
          <a id="btn-inicio" href="#" class="fw-bold" style="color: #d3e7c3 !important;">COMENZAR</a>
       </div>
 
    </div>
 
-   <div class="col-md-6 mx-auto" id="contenedor-preguntas" style="display: none;">
+   <div class="col-12 col-md-10 col-lg-6 mx-auto" id="contenedor-preguntas" style="display: none;">
 
       <div id="carouselExampleIndicators" class="carousel slide pb-4 d-flex flex-column justify-content-between" data-bs-interval="false" style="min-height: 400px;">
          <div class="carousel-inner">
@@ -371,12 +371,15 @@
                      <div style="height: 180px">
                         <img id="img-personaje" src="image/fondo.webp" style="object-fit: cover; height: 180px;">
                      </div>
+                     <p id="nombre-personaje" class="my-2" style="color: #9744f2;"></p>
                      <p id="descripcion" class="p-3"> </p>
                   </div>
-                  <div class="contenedor-diagnostico text-center mx-auto py-2" style="width: 60%!important">
-                     <img src="image/mariposa.gif" alt="" style="height: 70px;">
-                     <a id="btn-diagnostico" href="#" class="fw-bold" style="color: #d3e7c3 !important;">DIAGNOSTICO AQUÍ</a>
-                     <img src="image/mariposa.gif" alt="" style="height: 70px;">
+                  <div class="contenedor-diagnostico text-center mx-auto py-1 col-md-8 col-12">
+                     <div class="d-flex nowrap align-items-center justify-content-around">
+                        <img src="image/mariposa.gif" alt="" style="height: 70px;">
+                        <a id="btn-diagnostico" href="#" class="fw-bold" style="color: #d3e7c3 !important;">DIAGNOSTICO AQUÍ</a>
+                        <img src="image/mariposa.gif" alt="" style="height: 70px;">
+                     </div>
                   </div>
                </div>
             </div>
@@ -397,15 +400,31 @@
       </div>
    </div>
 
-   <div id="contenedor-resultado" class="col-md-8 mx-auto bg-light p-5">
-      <p class="text-center mx-auto mt-5" style="width: 80%;">
+   <div id="contenedor-resultado" class="col-12 col-md-8 mx-auto bg-light">
+      <p class="text-center mx-auto mt-2 p-1 p-md-5 silkscreen-regular">
          Las enfermedades mentales son una condición real. La variedad de estas condiciones no puede sintetizarse en personajes romantizados de la cultura mediática. 
          Las personas que las padecen sufren las consecuencias de este tipo de estigmatizaciones. Un diagnóstico jamás podrá darse a través de una forma virtual. No eres un personaje, eres una persona; si requieres ayuda busca un profesional.
       </p>
+
+      <div class="d-flex flex-row justify-content-around">
+         <div class="cuadro  text-center px-5 py-5 ">
+            <a id="" href="#" class="fw-bold" style="color: #d3e7c3 !important;">
+               Línea de ayuda Ecuador (Anima EC)<br>
+               +593 98 878 3425
+            </a>
+         </div>
+         <div class="cuadro  text-center px-5 py-5 ">
+            <a id="" href="#" class="fw-bold" style="color: #d3e7c3 !important;">
+               Línea de ayuda México (--)<br>
+               ---
+            </a>
+         </div>
+
+      </div>
    </div>
 
    <script src="personajes.js"></script>
-   <script src="index.js?0.1"></script>
+   <script src="index.js?0.2"></script>
 
 </body>
 </html>
