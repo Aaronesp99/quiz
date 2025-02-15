@@ -1,19 +1,30 @@
 $(function(){
-   let puntaje;
+   calcularPersonaje();
 
-   console.log(personajes);
-   $("#btn-diagnostico").on('click', ()=>{
-      puntaje = 0;
-      $.each($("input[type='radio']:checked"), (i, v)=>{
-         puntaje += parseInt($(v).val()) ?? 0;
-      });
+   $("#btn-inicio").click(function(){
+      $("#contenedor-inicio").hide();
+      $("#contenedor-preguntas").show();
+   })
 
-      console.log(puntaje);
-      const personaje = personajes.find(p => puntaje >= p.min && puntaje <= p.max);
+   $("input[type='radio']").on('change', ()=>{
+      calcularPersonaje();
+   });
 
-      console.log(personaje);
-      $("#img-personaje").attr("src", 'image/'+personaje.url);
-      $("#descripcion").text(personaje.descripcion);
+   $("#btn-diagnostico").click(function(){
+      $("#contenedor-preguntas").hide();
+      $("#contenedor-resultado").show();
    });
 
 });
+
+function calcularPersonaje(){
+   puntaje=0;
+   $.each($("input[type='radio']:checked"), (i, v)=>{
+      puntaje += parseInt($(v).val()) ?? 0;
+   });
+
+   const personaje = personajes.find(p => puntaje >= p.min && puntaje <= p.max);
+
+   $("#img-personaje").attr("src", 'image/'+personaje.url);
+   $("#descripcion").text(personaje.descripcion);
+}
